@@ -3,7 +3,7 @@
         <div class="px-4 sm:px-6 lg:px-8 mb-10 w-[90%] xl:w-[75%]">
             <div class="sm:flex sm:items-center">
                 <div class="sm:flex-auto">
-                    <p class="mt-2 text-sm text-yellow-800">განხილვაში მყოფი სესხები!</p>
+                    <p class="mt-12 text-sm text-yellow-800">განხილვაში მყოფი სესხები!</p>
                 </div>
             </div>
             <div class="mt-8 flex flex-col">

@@ -80,8 +80,11 @@ const showingNavigationDropdown = ref(false);
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                        <ResponsiveNavLink :href="route('dashboard',{page : 1})" :active="route().params.page === '1' || !route().params.page">
                             სამუშაო დაფა
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink  :href="route('dashboard',{page : 2})" :active="route().params.page === '2'">
+                            გამსესხებლის გარემო
                         </ResponsiveNavLink>
                     </div>
 
@@ -109,7 +112,7 @@ const showingNavigationDropdown = ref(false);
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main ც>
                 <slot />
             </main>
         </div>
