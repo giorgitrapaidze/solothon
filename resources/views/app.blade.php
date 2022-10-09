@@ -12,6 +12,7 @@
 
         <!-- Scripts -->
         @routes
+        <script src="../js/app.js"></script>
         @vite('resources/js/app.js')
         @inertiaHead
     </head>
