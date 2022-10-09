@@ -16,6 +16,8 @@
                        autocomplete="card_name"/>
             <InputError class="mt-2" :message="max_amount_to_land"/>
         </div>
+
+
         <div class="mt-4 w-3/4">
             <InputLabel for="card_name" value="ბარათის სახელი"/>
             <TextInput id="card_name" type="text" class="mt-1 block w-full border border-black" v-model="card_name" required placeholder="Soul Goodman"
