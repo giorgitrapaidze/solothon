@@ -52,8 +52,8 @@
         ],
         "warmup": [
             "@php artisan optimize",
-            "npm install",
-            "npm run build"
+            "@php artisan route:clear",
+            "@php artisan cache:clear"
         ]
     },
     "extra": {
