@@ -20,6 +20,8 @@ const submit = () => {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
+
+const csrf = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 </script>
 
 <template>
@@ -56,6 +58,8 @@ const submit = () => {
                 <TextInput id="password_confirmation" type="password" class="mt-1 block w-full" v-model="form.password_confirmation" required autocomplete="new-password" />
                 <InputError class="mt-2" :message="form.errors.password_confirmation" />
             </div>
+
+            <input type="hidden" name="_token" :value="csrf">
 
             <div class="flex items-center justify-end mt-4">
                 <Link :href="route('login')" class="underline text-sm text-gray-600 hover:text-gray-900">
